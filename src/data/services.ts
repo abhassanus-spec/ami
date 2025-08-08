@@ -1,0 +1,186 @@
+import { Service } from '../types';
+
+const services: Service[] = [
+  {
+    id: 'botox-3-zonen',
+    title: {
+      de: 'BOTOX 3 ZONEN',
+      en: 'BOTOX 3 ZONES',
+      ar: 'بوتكس 3 مناطق',
+      tr: 'BOTOX 3 BÖLGE',
+    },
+    description: {
+      de: 'Professionelle Botox-Behandlung für drei Gesichtszonen',
+      en: 'Professional Botox treatment for three facial zones',
+      ar: 'علاج البوتكس الاحترافي لثلاث مناطق في الوجه',
+      tr: 'Üç yüz bölgesi için profesyonel Botoks tedavisi',
+    },
+    duration: '30 min',
+    price: '110€',
+    image: 'https://images.pexels.com/photos/7479738/pexels-photo-7479738.jpeg',
+  },
+  {
+    id: 'lippenfiller',
+    title: {
+      de: 'LIPPENFILLER (1 ML)',
+      en: 'LIP FILLER (1 ML)',
+      ar: 'فيلر الشفاه (1 مل)',
+      tr: 'DUDAK DOLGUSU (1 ML)',
+    },
+    description: {
+      de: 'Volumenaufbau und Konturierung der Lippen',
+      en: 'Volume enhancement and lip contouring',
+      ar: 'تعزيز الحجم ونحت الشفاه',
+      tr: 'Hacim artırma ve dudak şekillendirme',
+    },
+    duration: '45 min',
+    price: '150€',
+    image: 'https://images.pexels.com/photos/7479744/pexels-photo-7479744.jpeg',
+  },
+  {
+    id: 'gesichtsfiller',
+    title: {
+      de: 'GESICHTSFILLER (1 ML)',
+      en: 'FACIAL FILLER (1 ML)',
+      ar: 'فيلر الوجه (1 مل)',
+      tr: 'YÜZ DOLGUSU (1 ML)',
+    },
+    description: {
+      de: 'Präzise Gesichtskonturierung mit Hyaluronsäure',
+      en: 'Precise facial contouring with hyaluronic acid',
+      ar: 'نحت الوجه الدقيق بحمض الهيالورونيك',
+      tr: 'Hyaluronik asit ile hassas yüz şekillendirme',
+    },
+    duration: '45 min',
+    price: '100€',
+    image: 'https://images.pexels.com/photos/7480550/pexels-photo-7480550.jpeg',
+  },
+  {
+    id: 'co2-laser',
+    title: {
+      de: 'CO2-LASER GESICHT',
+      en: 'CO2-LASER FACE',
+      ar: 'ليزر ثاني أكسيد الكربون للوجه',
+      tr: 'CO2-LAZER YÜZ',
+    },
+    description: {
+      de: 'Hautbeschönigung mit modernster Lasertechnologie',
+      en: 'Skin enhancement with modern laser technology',
+      ar: 'تحسين البشرة بأحدث تقنيات الليزر',
+      tr: 'Modern lazer teknolojisi ile cilt güzelleştirme',
+    },
+    duration: '60 min',
+    price: '150€',
+    image: 'https://images.pexels.com/photos/7479731/pexels-photo-7479731.jpeg',
+  },
+  {
+    id: 'prp-haare',
+    title: {
+      de: 'PRP HAARE & MESOTHERAPIE',
+      en: 'PRP HAIR & MESOTHERAPY',
+      ar: 'بي آر بي للشعر والعلاج الميزوثيرابي',
+      tr: 'PRP SAÇ & MEZOTERAPİ',
+    },
+    description: {
+      de: 'Innovative Behandlung für Haarwachstum und -verdichtung',
+      en: 'Innovative treatment for hair growth and thickening',
+      ar: 'علاج مبتكر لنمو الشعر وتكثيفه',
+      tr: 'Saç büyümesi ve kalınlaşması için yenilikçi tedavi',
+    },
+    duration: '45 min',
+    price: '75€',
+    image: 'https://images.pexels.com/photos/3997381/pexels-photo-3997381.jpeg',
+  },
+  {
+    id: 'exosomen',
+    title: {
+      de: 'EXOSOMEN GESICHT',
+      en: 'EXOSOMES FACE',
+      ar: 'إكسوسومز للوجه',
+      tr: 'EKSOZOM YÜZ',
+    },
+    description: {
+      de: 'Fortschrittliche Behandlung für Hauterneuerung',
+      en: 'Advanced treatment for skin renewal',
+      ar: 'علاج متقدم لتجديد البشرة',
+      tr: 'Cilt yenilenmesi için gelişmiş tedavi',
+    },
+    duration: '60 min',
+    price: '150€',
+    image: 'https://images.pexels.com/photos/3764013/pexels-photo-3764013.jpeg',
+  },
+  {
+    id: 'rf-microneedling',
+    title: {
+      de: 'RF-MICRONEEDLING + EXOSOMEN',
+      en: 'RF-MICRONEEDLING + EXOSOMES',
+      ar: 'التثقيب الدقيق بالراديو + إكسوسومز',
+      tr: 'RF-MİKROİĞNELEME + EKSOZOM',
+    },
+    description: {
+      de: 'Kombinierte Behandlung für maximale Hautverbesserung',
+      en: 'Combined treatment for maximum skin improvement',
+      ar: 'علاج مركب لتحسين البشرة بشكل أقصى',
+      tr: 'Maksimum cilt iyileştirmesi için kombine tedavi',
+    },
+    duration: '75 min',
+    price: '200€',
+    image: 'https://images.pexels.com/photos/3764579/pexels-photo-3764579.jpeg',
+  },
+  {
+    id: 'laser-hair',
+    title: {
+      de: 'LASER-HAARENTFERNUNG GANZKÖRPER',
+      en: 'FULL BODY LASER HAIR REMOVAL',
+      ar: 'إزالة الشعر بالليزر للجسم كامل',
+      tr: 'TÜM VÜCUT LAZER EPİLASYON',
+    },
+    description: {
+      de: 'Dauerhafte Haarentfernung für den gesamten Körper',
+      en: 'Permanent hair removal for the entire body',
+      ar: 'إزالة الشعر الدائمة للجسم بأكمله',
+      tr: 'Tüm vücut için kalıcı tüy alma',
+    },
+    duration: '120 min',
+    price: '80€',
+    image: 'https://images.pexels.com/photos/3997373/pexels-photo-3997373.jpeg',
+  },
+  {
+    id: 'folgetermine',
+    title: {
+      de: 'FOLGETERMINE',
+      en: 'FOLLOW-UP APPOINTMENTS',
+      ar: 'المواعيد المتابعة',
+      tr: 'TAKİP RANDEVULARI',
+    },
+    description: {
+      de: 'Nachbehandlung und Pflege',
+      en: 'Follow-up treatment and care',
+      ar: 'العلاج والرعاية المتابعة',
+      tr: 'Takip tedavisi ve bakım',
+    },
+    duration: '45 min',
+    price: '120€',
+    image: 'https://images.pexels.com/photos/3997990/pexels-photo-3997990.jpeg',
+  },
+  {
+    id: 'fettweg',
+    title: {
+      de: 'FETTWEGSPRITZE (DOPPELKINN)',
+      en: 'FAT DISSOLVING INJECTION (DOUBLE CHIN)',
+      ar: 'حقن إذابة الدهون (الذقن المزدوج)',
+      tr: 'YAĞ ERİTİCİ ENJEKSİYON (ÇİFT ÇENE)',
+    },
+    description: {
+      de: 'Gezielte Behandlung zur Reduzierung des Doppelkinns',
+      en: 'Targeted treatment for double chin reduction',
+      ar: 'علاج مركز لتقليل الذقن المزدوج',
+      tr: 'Çift çene azaltma için hedefli tedavi',
+    },
+    duration: '30 min',
+    price: '75€',
+    image: 'https://images.pexels.com/photos/3997371/pexels-photo-3997371.jpeg',
+  },
+];
+
+export default services;
