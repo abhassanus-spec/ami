@@ -10,11 +10,30 @@
   }
 
   body {
-    @apply text-gray-900;
+    @apply text-charcoal;
+    font-family: 'Inter', sans-serif;
   }
 
   * {
     scroll-padding-top: 80px;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f5f1e8;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #C9B18A;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2D5D5D;
   }
 }
 

@@ -4,7 +4,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import { AuthProvider } from './context/AuthContext';
 import { Toaster } from 'react-hot-toast';
 import Header from './components/Header';
-import Hero from './components/Hero';
+import HeroElegant from './components/HeroElegant';
 import ServicesSection from './components/ServicesSection';
 import AboutSection from './components/AboutSection';
 import BookingSection from './components/BookingSection';
@@ -28,7 +28,7 @@ function App() {
           </Helmet>
           <div className="min-h-screen bg-white font-sans">
             <Header />
-            <Hero />
+            <HeroElegant />
             <ServicesSection />
             <AboutSection />
             <BookingSection />
