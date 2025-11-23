@@ -26,7 +26,7 @@ const ServicesSection: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col"
               style={{
                 animationDelay: `${index * 100}ms`,
                 animation: 'smoothSlideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards'
@@ -40,11 +40,11 @@ const ServicesSection: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/40 via-green-900/10 to-transparent group-hover:from-green-900/30 transition-all duration-500"></div>
               </div>
-              <div className="p-8">
+              <div className="p-8 flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold text-green-800 mb-4 leading-snug">
                   {service.title[language]}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   {service.description[language]}
                 </p>
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-gray-200">
