@@ -4,37 +4,39 @@ export default {
   theme: {
     extend: {
       colors: {
-        green: {
-          50: '#e6f0ee',
-          100: '#cde1dc',
-          200: '#9bc3bb',
-          300: '#69a59a',
-          400: '#388778',
-          500: '#266a5a',
-          600: '#1e574b',
-          700: '#1a4e42',
-          800: '#1C4A40', // Primary color from Aljeroudy logo
-          900: '#123530',
-          950: '#0a201c',
+        teal: {
+          50: '#e6f0f0',
+          100: '#cce0e0',
+          200: '#99c1c1',
+          300: '#66a3a3',
+          400: '#338484',
+          500: '#2D5D5D', // Deep Teal - Main brand color
+          600: '#1e4444', // Forest Green - Darker variant
+          700: '#193737',
+          800: '#142a2a',
+          900: '#0f1d1d',
         },
         beige: {
-          DEFAULT: '#D5BEA9', // Accent color from Aljeroudy logo
-          50: '#f9f5f2',
-          100: '#f3ece5',
-          200: '#e9daca',
-          300: '#D5BEA9',
-          400: '#c2a087',
-          500: '#b08669',
-          600: '#a07559',
-          700: '#85614c',
-          800: '#6f5243',
-          900: '#5b4439',
-          950: '#362821',
+          DEFAULT: '#C9B18A', // Warm Beige - Accent/highlights
+          50: '#f9f6f1',
+          100: '#f5f1e8', // Soft Cream - Backgrounds
+          200: '#ede6d8',
+          300: '#dfd2ba',
+          400: '#C9B18A',
+          500: '#b89968',
+          600: '#a88450',
+          700: '#8d6d43',
+          800: '#73593a',
+          900: '#5f4a31',
+        },
+        charcoal: {
+          DEFAULT: '#2C2C2C',
         },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Georgia', 'serif'],
+        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+        display: ['Cormorant Garamond', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
