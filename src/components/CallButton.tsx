@@ -2,7 +2,7 @@ import React from 'react';
 import { Phone } from 'lucide-react';
 
 const CallButton: React.FC = () => {
-  const phoneNumber = '+49201XXXXXXX'; // Replace with actual number
+  const phoneNumber = '+4917641454381';
 
   return (
     <a

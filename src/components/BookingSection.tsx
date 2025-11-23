@@ -56,8 +56,8 @@ const BookingSection: React.FC = () => {
     },
   };
 
-  const phoneNumber = '+491234567890'; // Replace with actual phone
-  const whatsappNumber = '491234567890'; // Replace with actual WhatsApp number
+  const phoneNumber = '+4917641454381';
+  const whatsappNumber = '4917641454381';
   const whatsappMessage = encodeURIComponent(
     language === 'de'
       ? 'Hallo, ich möchte gerne einen Termin vereinbaren.'

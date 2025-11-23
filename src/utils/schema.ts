@@ -5,7 +5,7 @@ export const localBusinessSchema = {
   image: 'https://aljeroudy-aesthetik.de/logo.png',
   '@id': 'https://aljeroudy-aesthetik.de',
   url: 'https://aljeroudy-aesthetik.de',
-  telephone: '+49-201-XXXXXXX',
+  telephone: '+49-176-41454381',
   priceRange: '€€',
   address: {
     '@type': 'PostalAddress',

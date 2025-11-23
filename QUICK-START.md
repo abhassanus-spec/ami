@@ -40,20 +40,14 @@ QUICK-START.md                  # Diese Datei
 
 ### 1. Kontaktdaten aktualisieren
 
-**WICHTIG:** Ersetzen Sie die Platzhalter mit echten Daten:
+**✅ TELEFON & WHATSAPP BEREITS AKTUALISIERT!**
+Telefonnummer: +49 176 41454381
 
-#### WhatsApp & Telefon
-```typescript
-// src/components/WhatsAppButton.tsx - Zeile 6
-const phoneNumber = '491234567890'; // Ihre WhatsApp Nummer
-
-// src/components/CallButton.tsx - Zeile 5
-const phoneNumber = '+49201XXXXXXX'; // Ihre Telefonnummer
-
-// src/components/BookingSection.tsx - Zeilen 59-60
-const phoneNumber = '+491234567890'; // Telefonnummer
-const whatsappNumber = '491234567890'; // WhatsApp
-```
+Die Telefonnummer ist bereits in allen Components eingetragen:
+- ✅ WhatsAppButton.tsx
+- ✅ CallButton.tsx
+- ✅ BookingSection.tsx
+- ✅ schema.ts (für Google)
 
 #### Adresse & Koordinaten
 ```typescript
