@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CookieRichtlinie: React.FC = () => {
   const handleOpenSettings = () => {
@@ -147,18 +148,18 @@ const CookieRichtlinie: React.FC = () => {
           <h2>Weitere Informationen</h2>
           <p>
             Weitere Informationen zur Verarbeitung Ihrer personenbezogenen Daten finden
-            Sie in unserer <a href="/datenschutz">Datenschutzerklärung</a>.
+            Sie in unserer <Link to="/datenschutz">Datenschutzerklärung</Link>.
           </p>
           <p>
             Bei Fragen zu unseren Cookies können Sie uns jederzeit unter den im
-            <a href="/impressum"> Impressum</a> angegebenen Kontaktdaten erreichen.
+            <Link to="/impressum"> Impressum</Link> angegebenen Kontaktdaten erreichen.
           </p>
         </section>
 
         <p className="legal-update">Stand: November 2024</p>
 
         <div className="legal-buttons">
-          <a href="/" className="btn-back">← Zurück zur Startseite</a>
+          <Link to="/" className="btn-back">← Zurück zur Startseite</Link>
           <button className="btn-primary" onClick={handleOpenSettings}>
             Cookie-Einstellungen
           </button>

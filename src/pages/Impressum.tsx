@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Impressum: React.FC = () => {
   return (
@@ -10,9 +11,9 @@ const Impressum: React.FC = () => {
           <h2>Angaben gemäß § 5 TMG</h2>
           <p>
             <strong>Aljeroudy Ästhetikpraxis</strong><br />
-            [PLATZHALTER: Vor- und Nachname des Inhabers]<br />
-            [PLATZHALTER: Straße und Hausnummer]<br />
-            [PLATZHALTER: PLZ] Essen<br />
+            Dr. med. Louay Aljairoudy<br />
+            Am Schultenhof 4<br />
+            45141 Essen<br />
             Deutschland
           </p>
         </section>
@@ -20,22 +21,26 @@ const Impressum: React.FC = () => {
         <section className="legal-section">
           <h2>Kontakt</h2>
           <p>
-            <strong>Telefon:</strong> +49 176 41454381<br />
-            <strong>E-Mail:</strong> [PLATZHALTER: kontakt@praxis-aljeroudy.de]
+            <strong>Telefon:</strong> <a href="tel:+4917641454381">+49 176 41454381</a><br />
+            <strong>E-Mail:</strong> <a href="mailto:info@praxis-aljeroudy.de">info@praxis-aljeroudy.de</a>
           </p>
         </section>
 
         <section className="legal-section">
           <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
           <p>
-            <strong>Berufsbezeichnung:</strong> [PLATZHALTER: z.B. Facharzt für Ästhetische Medizin / Kosmetiker]<br />
-            <strong>Zuständige Kammer:</strong> Ärztekammer Nordrhein (falls Arzt) / IHK (falls Kosmetiker)<br />
+            <strong>Berufsbezeichnung:</strong> Arzt<br />
+            <strong>Zuständige Kammer:</strong> Ärztekammer Nordrhein<br />
             <strong>Verliehen in:</strong> Deutschland
           </p>
           <p>
-            Es gelten folgende berufsrechtliche Regelungen:<br />
-            - Berufsordnung für Ärzte (falls zutreffend)<br />
-            - Heilberufsgesetz NRW<br />
+            Es gelten folgende berufsrechtliche Regelungen:
+          </p>
+          <ul>
+            <li>Berufsordnung für die nordrheinischen Ärztinnen und Ärzte</li>
+            <li>Heilberufsgesetz des Landes Nordrhein-Westfalen</li>
+          </ul>
+          <p>
             Regelungen einsehbar unter:
             <a href="https://www.aekno.de" target="_blank" rel="noopener noreferrer"> www.aekno.de</a>
           </p>
@@ -135,7 +140,7 @@ const Impressum: React.FC = () => {
         <p className="legal-update">Stand: November 2024</p>
 
         <div className="legal-buttons">
-          <a href="/" className="btn-back">← Zurück zur Startseite</a>
+          <Link to="/" className="btn-back">← Zurück zur Startseite</Link>
         </div>
       </div>
     </div>

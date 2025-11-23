@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 import Logo from './Logo';
@@ -137,28 +138,36 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="/impressum" className="hover:text-beige transition-colors">
+                <Link to="/impressum" className="hover:text-beige transition-colors">
                   {language === 'de' ? 'Impressum' :
                    language === 'en' ? 'Imprint' :
                    language === 'ar' ? 'بصمة' :
                    'Künye'}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/datenschutz" className="hover:text-beige transition-colors">
+                <Link to="/datenschutz" className="hover:text-beige transition-colors">
                   {language === 'de' ? 'Datenschutz' :
                    language === 'en' ? 'Privacy' :
                    language === 'ar' ? 'الخصوصية' :
                    'Gizlilik'}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/cookie-richtlinie" className="hover:text-beige transition-colors">
+                <Link to="/cookie-richtlinie" className="hover:text-beige transition-colors">
                   {language === 'de' ? 'Cookie-Richtlinie' :
                    language === 'en' ? 'Cookie Policy' :
                    language === 'ar' ? 'سياسة ملفات تعريف الارتباط' :
                    'Çerez Politikası'}
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/bildnachweise" className="hover:text-beige transition-colors">
+                  {language === 'de' ? 'Bildnachweise' :
+                   language === 'en' ? 'Image Credits' :
+                   language === 'ar' ? 'اعتمادات الصور' :
+                   'Resim Kredileri'}
+                </Link>
               </li>
               <li>
                 <button

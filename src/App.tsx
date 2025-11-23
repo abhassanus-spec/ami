@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { LanguageProvider } from './context/LanguageContext';
 import { AuthProvider } from './context/AuthContext';
@@ -16,6 +17,23 @@ import WhatsAppButton from './components/WhatsAppButton';
 import CallButton from './components/CallButton';
 import CookieConsentBanner from './components/CookieConsentBanner';
 import CookieSettingsButton from './components/CookieSettingsButton';
+import Impressum from './pages/Impressum';
+import Datenschutz from './pages/Datenschutz';
+import CookieRichtlinie from './pages/CookieRichtlinie';
+import Bildnachweise from './pages/Bildnachweise';
+
+function HomePage() {
+  return (
+    <>
+      <HeroElegant />
+      <ServicesSection />
+      <AboutSection />
+      <BookingSection />
+      <NewsletterSignup />
+      <ContactSection />
+    </>
+  );
+}
 
 function App() {
   return (
@@ -28,12 +46,13 @@ function App() {
           </Helmet>
           <div className="min-h-screen bg-white font-sans">
             <Header />
-            <HeroElegant />
-            <ServicesSection />
-            <AboutSection />
-            <BookingSection />
-            <NewsletterSignup />
-            <ContactSection />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/impressum" element={<Impressum />} />
+              <Route path="/datenschutz" element={<Datenschutz />} />
+              <Route path="/cookie-richtlinie" element={<CookieRichtlinie />} />
+              <Route path="/bildnachweise" element={<Bildnachweise />} />
+            </Routes>
             <Footer />
             <AiChatbox />
             <WhatsAppButton />
