@@ -1,140 +1,141 @@
 import React from 'react';
-import { FileText, MapPin, Phone, Mail } from 'lucide-react';
 
 const Impressum: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="bg-gradient-to-br from-green-800 to-green-900 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-4">
-            <FileText size={48} />
-            <h1 className="text-4xl md:text-5xl font-bold">Impressum</h1>
-          </div>
-        </div>
-      </div>
+    <div className="legal-page">
+      <div className="legal-container">
+        <h1>Impressum</h1>
 
-      <div className="container mx-auto px-4 py-12 max-w-4xl">
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 space-y-8">
-          <section>
-            <h2 className="text-2xl font-bold text-green-800 mb-4">
-              Angaben gemäß § 5 TMG
-            </h2>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin size={24} className="text-green-800 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold text-gray-900 text-lg">
-                    Ästhetik Praxis Aljeroudy
-                  </p>
-                  <p className="text-gray-700">[PLATZHALTER: Inhaber Dr. Louay Aljeroudy]</p>
-                  <p className="text-gray-700">[PLATZHALTER: Straße und Hausnummer]</p>
-                  <p className="text-gray-700">45XXX Essen-Stoppenberg</p>
-                </div>
-              </div>
+        <section className="legal-section">
+          <h2>Angaben gemäß § 5 TMG</h2>
+          <p>
+            <strong>Aljeroudy Ästhetikpraxis</strong><br />
+            [PLATZHALTER: Vor- und Nachname des Inhabers]<br />
+            [PLATZHALTER: Straße und Hausnummer]<br />
+            [PLATZHALTER: PLZ] Essen<br />
+            Deutschland
+          </p>
+        </section>
 
-              <div className="flex items-center gap-3">
-                <Phone size={24} className="text-green-800" />
-                <p className="text-gray-700">+49 176 41454381</p>
-              </div>
+        <section className="legal-section">
+          <h2>Kontakt</h2>
+          <p>
+            <strong>Telefon:</strong> +49 176 41454381<br />
+            <strong>E-Mail:</strong> [PLATZHALTER: kontakt@praxis-aljeroudy.de]
+          </p>
+        </section>
 
-              <div className="flex items-center gap-3">
-                <Mail size={24} className="text-green-800" />
-                <p className="text-gray-700">[PLATZHALTER: kontakt@praxis-aljeroudy.de]</p>
-              </div>
-            </div>
-          </section>
+        <section className="legal-section">
+          <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+          <p>
+            <strong>Berufsbezeichnung:</strong> [PLATZHALTER: z.B. Facharzt für Ästhetische Medizin / Kosmetiker]<br />
+            <strong>Zuständige Kammer:</strong> Ärztekammer Nordrhein (falls Arzt) / IHK (falls Kosmetiker)<br />
+            <strong>Verliehen in:</strong> Deutschland
+          </p>
+          <p>
+            Es gelten folgende berufsrechtliche Regelungen:<br />
+            - Berufsordnung für Ärzte (falls zutreffend)<br />
+            - Heilberufsgesetz NRW<br />
+            Regelungen einsehbar unter:
+            <a href="https://www.aekno.de" target="_blank" rel="noopener noreferrer"> www.aekno.de</a>
+          </p>
+        </section>
 
-          <section>
-            <h2 className="text-2xl font-bold text-green-800 mb-4">
-              Berufsbezeichnung und berufsrechtliche Regelungen
-            </h2>
-            <div className="space-y-3 text-gray-700">
-              <p><strong>Berufsbezeichnung:</strong> [z.B. Facharzt für...]</p>
-              <p><strong>Zuständige Kammer:</strong> Ärztekammer Nordrhein</p>
-              <p><strong>Verliehen in:</strong> Deutschland</p>
-              <p className="pt-2">Es gelten folgende berufsrechtliche Regelungen:</p>
-              <ul className="list-disc list-inside ml-4 space-y-1">
-                <li>Berufsordnung für Ärzte</li>
-                <li>Heilberufsgesetz NRW</li>
-              </ul>
-              <p>
-                Regelungen einsehbar unter:{' '}
-                <a
-                  href="https://www.aekno.de"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-800 hover:underline"
-                >
-                  www.aekno.de
-                </a>
-              </p>
-            </div>
-          </section>
+        <section className="legal-section">
+          <h2>Aufsichtsbehörde</h2>
+          <p>
+            Ärztekammer Nordrhein<br />
+            Tersteegenstraße 9<br />
+            40474 Düsseldorf<br />
+            Telefon: 0211 4302-0<br />
+            Website: <a href="https://www.aekno.de" target="_blank" rel="noopener noreferrer">www.aekno.de</a>
+          </p>
+        </section>
 
-          <section>
-            <h2 className="text-2xl font-bold text-green-800 mb-4">Aufsichtsbehörde</h2>
-            <div className="bg-green-50 p-6 rounded-xl">
-              <p className="font-semibold text-gray-900 mb-2">Ärztekammer Nordrhein</p>
-              <p className="text-gray-700">Tersteegenstraße 9</p>
-              <p className="text-gray-700">40474 Düsseldorf</p>
-              <p className="text-gray-700 mt-2">Tel: 0211/4302-0</p>
-            </div>
-          </section>
+        <section className="legal-section">
+          <h2>Angaben zur Berufshaftpflichtversicherung</h2>
+          <p>
+            <strong>Name und Sitz des Versicherers:</strong><br />
+            [PLATZHALTER: Name der Versicherungsgesellschaft]<br />
+            [PLATZHALTER: Adresse der Versicherung]
+          </p>
+          <p>
+            <strong>Geltungsbereich der Versicherung:</strong><br />
+            Deutschland / Weltweit
+          </p>
+        </section>
 
-          <section>
-            <h2 className="text-2xl font-bold text-green-800 mb-4">
-              Angaben zur Berufshaftpflichtversicherung
-            </h2>
-            <div className="space-y-2 text-gray-700">
-              <p><strong>Versicherer:</strong> [PLATZHALTER: Name der Versicherung]</p>
-              <p><strong>Geltungsbereich:</strong> Deutschland</p>
-            </div>
-          </section>
+        <section className="legal-section">
+          <h2>EU-Streitschlichtung</h2>
+          <p>
+            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+            <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">
+              {' '}https://ec.europa.eu/consumers/odr
+            </a>
+          </p>
+          <p>Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+        </section>
 
-          <section>
-            <h2 className="text-2xl font-bold text-green-800 mb-4">Streitschlichtung</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS)
-              bereit:{' '}
-              <a
-                href="https://ec.europa.eu/consumers/odr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-800 hover:underline"
-              >
-                https://ec.europa.eu/consumers/odr
-              </a>
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-              Verbraucherschlichtungsstelle teilzunehmen.
-            </p>
-          </section>
+        <section className="legal-section">
+          <h2>Verbraucherstreitbeilegung/Universalschlichtungsstelle</h2>
+          <p>
+            Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+            Verbraucherschlichtungsstelle teilzunehmen.
+          </p>
+        </section>
 
-          <section>
-            <h2 className="text-2xl font-bold text-green-800 mb-4">Haftungsausschluss</h2>
+        <section className="legal-section">
+          <h2>Haftung für Inhalte</h2>
+          <p>
+            Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten
+            nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als
+            Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
+            Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige
+            Tätigkeit hinweisen.
+          </p>
+          <p>
+            Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den
+            allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch
+            erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei
+            Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend
+            entfernen.
+          </p>
+        </section>
 
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Haftung für Inhalte</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
-              Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
-            </p>
+        <section className="legal-section">
+          <h2>Haftung für Links</h2>
+          <p>
+            Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen
+            Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
+            Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der
+            Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf
+            mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung
+            nicht erkennbar.
+          </p>
+        </section>
 
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Haftung für Links</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir
-              keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige
-              Anbieter oder Betreiber verantwortlich.
-            </p>
+        <section className="legal-section">
+          <h2>Urheberrecht</h2>
+          <p>
+            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
+            dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
+            der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen
+            Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind
+            nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+          </p>
+          <p>
+            Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die
+            Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche
+            gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden,
+            bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen
+            werden wir derartige Inhalte umgehend entfernen.
+          </p>
+        </section>
 
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Urheberrecht</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
-              unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung
-              und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der
-              schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-            </p>
-          </section>
+        <p className="legal-update">Stand: November 2024</p>
+
+        <div className="legal-buttons">
+          <a href="/" className="btn-back">← Zurück zur Startseite</a>
         </div>
       </div>
     </div>

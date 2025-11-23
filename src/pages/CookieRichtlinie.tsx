@@ -1,187 +1,167 @@
-import React, { useState } from 'react';
-import { Cookie } from 'lucide-react';
-import { setConsentStatus, getConsentStatus } from '../utils/cookieConsent';
+import React from 'react';
 
 const CookieRichtlinie: React.FC = () => {
-  const [showModal, setShowModal] = useState(false);
-
   const handleOpenSettings = () => {
-    setShowModal(true);
+    const event = new Event('openCookieSettings');
+    window.dispatchEvent(event);
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="bg-gradient-to-br from-green-800 to-green-900 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-4">
-            <Cookie size={48} />
-            <h1 className="text-4xl md:text-5xl font-bold">Cookie-Richtlinie</h1>
+    <div className="legal-page">
+      <div className="legal-container">
+        <h1>Cookie-Richtlinie</h1>
+
+        <section className="legal-section">
+          <h2>Was sind Cookies?</h2>
+          <p>
+            Cookies sind kleine Textdateien, die auf Ihrem Computer oder mobilen Gerät
+            gespeichert werden, wenn Sie eine Website besuchen. Sie helfen der Website,
+            sich an Informationen über Ihren Besuch zu erinnern, wie Ihre bevorzugte
+            Sprache und andere Einstellungen.
+          </p>
+        </section>
+
+        <section className="legal-section">
+          <h2>Welche Arten von Cookies verwenden wir?</h2>
+
+          <h3>1. Essenzielle Cookies (immer aktiv)</h3>
+          <p>
+            Diese Cookies sind für den Betrieb der Website unbedingt erforderlich und
+            können in unseren Systemen nicht deaktiviert werden. Sie werden in der Regel
+            nur als Reaktion auf von Ihnen getätigte Aktionen gesetzt, die einer
+            Serviceanforderung entsprechen.
+          </p>
+
+          <div className="cookie-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Cookie-Name</th>
+                  <th>Zweck</th>
+                  <th>Laufzeit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>cookie_consent</td>
+                  <td>Speichert Ihre Cookie-Präferenzen</td>
+                  <td>12 Monate</td>
+                </tr>
+                <tr>
+                  <td>session_id</td>
+                  <td>Aufrechterhaltung der Sitzung</td>
+                  <td>Session</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </div>
-      </div>
 
-      <div className="container mx-auto px-4 py-12 max-w-4xl">
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 space-y-8">
-          <section>
-            <h2 className="text-2xl font-bold text-green-800 mb-4">Was sind Cookies?</h2>
-            <p className="text-gray-700 leading-relaxed">
-              Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie
-              eine Website besuchen. Sie helfen uns, die Website funktional zu gestalten, die
-              Leistung zu verbessern und relevante Informationen bereitzustellen.
-            </p>
-          </section>
+          <h3>2. Analyse-Cookies (optional - nur mit Einwilligung)</h3>
+          <p>
+            Diese Cookies ermöglichen es uns, Besuche und Traffic-Quellen zu zählen,
+            damit wir die Leistung unserer Website messen und verbessern können.
+          </p>
 
-          <section>
-            <h2 className="text-2xl font-bold text-green-800 mb-6">
-              Welche Cookies verwenden wir?
-            </h2>
+          <div className="cookie-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Cookie-Name</th>
+                  <th>Anbieter</th>
+                  <th>Zweck</th>
+                  <th>Laufzeit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>_ga</td>
+                  <td>Google Analytics</td>
+                  <td>Unterscheidung von Benutzern</td>
+                  <td>2 Jahre</td>
+                </tr>
+                <tr>
+                  <td>_gid</td>
+                  <td>Google Analytics</td>
+                  <td>Unterscheidung von Benutzern</td>
+                  <td>24 Stunden</td>
+                </tr>
+                <tr>
+                  <td>_gat</td>
+                  <td>Google Analytics</td>
+                  <td>Anfragerate drosseln</td>
+                  <td>1 Minute</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-            {/* Essenzielle Cookies */}
-            <div className="mb-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                ✅ Essenzielle Cookies (immer aktiv)
-              </h3>
-              <p className="text-gray-700 mb-4">
-                Diese Cookies sind notwendig, damit die Website ordnungsgemäß funktioniert.
-              </p>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="bg-green-50">
-                      <th className="border border-gray-300 px-4 py-2 text-left">Cookie-Name</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Zweck</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Laufzeit</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">cookie_consent</td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        Speichert Ihre Cookie-Präferenzen
-                      </td>
-                      <td className="border border-gray-300 px-4 py-2">12 Monate</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">session_id</td>
-                      <td className="border border-gray-300 px-4 py-2">Session-Verwaltung</td>
-                      <td className="border border-gray-300 px-4 py-2">Session</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+          <h3>3. Marketing-Cookies (optional - nur mit Einwilligung)</h3>
+          <p>
+            Diese Cookies können über unsere Website von unseren Werbepartnern gesetzt
+            werden. Derzeit setzen wir keine Marketing-Cookies ein.
+          </p>
+        </section>
 
-            {/* Analyse-Cookies */}
-            <div className="mb-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                📊 Analyse-Cookies (mit Einwilligung)
-              </h3>
-              <p className="text-gray-700 mb-4">
-                Diese Cookies helfen uns, die Nutzung der Website zu analysieren und zu verbessern.
-              </p>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="bg-green-50">
-                      <th className="border border-gray-300 px-4 py-2 text-left">Cookie-Name</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Anbieter</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Zweck</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Laufzeit</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">_ga</td>
-                      <td className="border border-gray-300 px-4 py-2">Google</td>
-                      <td className="border border-gray-300 px-4 py-2">Besucheranalyse</td>
-                      <td className="border border-gray-300 px-4 py-2">2 Jahre</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">_gid</td>
-                      <td className="border border-gray-300 px-4 py-2">Google</td>
-                      <td className="border border-gray-300 px-4 py-2">Besucheranalyse</td>
-                      <td className="border border-gray-300 px-4 py-2">24 Stunden</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            {/* Marketing-Cookies */}
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                🎯 Marketing-Cookies (mit Einwilligung)
-              </h3>
-              <p className="text-gray-700">
-                Derzeit setzen wir keine Marketing-Cookies ein.
-              </p>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-green-800 mb-4">
-              Ihre Cookie-Einstellungen verwalten
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Sie können Ihre Cookie-Einstellungen jederzeit ändern. Klicken Sie auf den Button,
-              um Ihre Präferenzen anzupassen:
-            </p>
-            <button
-              onClick={handleOpenSettings}
-              className="bg-green-800 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl flex items-center gap-3"
-            >
-              <Cookie size={24} />
-              <span>Cookie-Einstellungen öffnen</span>
+        <section className="legal-section">
+          <h2>Ihre Cookie-Einstellungen verwalten</h2>
+          <p>
+            Sie können Ihre Cookie-Einstellungen jederzeit ändern. Klicken Sie dafür auf
+            den folgenden Button:
+          </p>
+          <div className="cookie-settings-btn-container">
+            <button className="btn-primary" onClick={handleOpenSettings}>
+              🍪 Cookie-Einstellungen öffnen
             </button>
-          </section>
+          </div>
+          <p>
+            Bitte beachten Sie, dass das Deaktivieren bestimmter Cookies die
+            Funktionalität der Website beeinträchtigen kann.
+          </p>
+        </section>
 
-          <section>
-            <h2 className="text-2xl font-bold text-green-800 mb-4">
-              Cookies im Browser löschen
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Sie können Cookies auch direkt in Ihrem Browser verwalten und löschen:
-            </p>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="font-semibold min-w-[100px]">Chrome:</span>
-                <span>Einstellungen → Datenschutz und Sicherheit → Browserdaten löschen</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="font-semibold min-w-[100px]">Firefox:</span>
-                <span>Einstellungen → Datenschutz & Sicherheit → Cookies und Website-Daten</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="font-semibold min-w-[100px]">Safari:</span>
-                <span>Einstellungen → Datenschutz → Website-Daten verwalten</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="font-semibold min-w-[100px]">Edge:</span>
-                <span>Einstellungen → Datenschutz → Cookies und Websitedaten</span>
-              </li>
-            </ul>
-          </section>
+        <section className="legal-section">
+          <h2>Cookies in Ihrem Browser löschen</h2>
+          <p>
+            Sie können Cookies auch direkt in Ihrem Browser löschen oder blockieren:
+          </p>
+          <ul>
+            <li>
+              <strong>Google Chrome:</strong> Einstellungen → Datenschutz und Sicherheit
+              → Cookies und andere Website-Daten → Alle Cookies und Website-Daten anzeigen
+            </li>
+            <li>
+              <strong>Mozilla Firefox:</strong> Einstellungen → Datenschutz & Sicherheit
+              → Cookies und Website-Daten → Daten verwalten
+            </li>
+            <li>
+              <strong>Safari:</strong> Einstellungen → Datenschutz → Website-Daten verwalten
+            </li>
+            <li>
+              <strong>Microsoft Edge:</strong> Einstellungen → Cookies und
+              Websiteberechtigungen → Cookies und gespeicherte Daten verwalten und löschen
+            </li>
+          </ul>
+        </section>
 
-          <section className="bg-blue-50 p-6 rounded-xl border-2 border-blue-200">
-            <h3 className="text-lg font-bold text-blue-900 mb-2">💡 Wichtiger Hinweis</h3>
-            <p className="text-blue-800 leading-relaxed">
-              Wenn Sie alle Cookies ablehnen, können einige Funktionen der Website möglicherweise
-              nicht richtig funktionieren. Essenzielle Cookies sind für den Betrieb der Website
-              erforderlich und können nicht deaktiviert werden.
-            </p>
-          </section>
+        <section className="legal-section">
+          <h2>Weitere Informationen</h2>
+          <p>
+            Weitere Informationen zur Verarbeitung Ihrer personenbezogenen Daten finden
+            Sie in unserer <a href="/datenschutz">Datenschutzerklärung</a>.
+          </p>
+          <p>
+            Bei Fragen zu unseren Cookies können Sie uns jederzeit unter den im
+            <a href="/impressum"> Impressum</a> angegebenen Kontaktdaten erreichen.
+          </p>
+        </section>
 
-          <section>
-            <h2 className="text-2xl font-bold text-green-800 mb-4">Weitere Informationen</h2>
-            <p className="text-gray-700 leading-relaxed">
-              Weitere Informationen zum Datenschutz und zur Verarbeitung Ihrer Daten finden Sie in
-              unserer{' '}
-              <a href="/datenschutz" className="text-green-800 hover:underline font-semibold">
-                Datenschutzerklärung
-              </a>
-              .
-            </p>
-          </section>
+        <p className="legal-update">Stand: November 2024</p>
+
+        <div className="legal-buttons">
+          <a href="/" className="btn-back">← Zurück zur Startseite</a>
+          <button className="btn-primary" onClick={handleOpenSettings}>
+            Cookie-Einstellungen
+          </button>
         </div>
       </div>
     </div>
