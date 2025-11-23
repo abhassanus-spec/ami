@@ -77,16 +77,16 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-white shadow-md py-2'
-          : 'bg-transparent py-4'
+          ? 'bg-white/95 backdrop-blur-md shadow-lg py-3'
+          : 'bg-transparent py-5'
       }`}
       dir={language === 'ar' ? 'rtl' : 'ltr'}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <Logo />
+          <Logo isScrolled={isScrolled} />
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -94,9 +94,9 @@ const Header: React.FC = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className={`text-sm font-medium ${
-                  isScrolled ? 'text-green-800' : 'text-white'
-                } hover:text-beige transition-colors duration-300`}
+                className={`text-sm font-medium transition-colors duration-300 ${
+                  isScrolled ? 'text-green-800 hover:text-green-600' : 'text-white hover:text-beige'
+                }`}
               >
                 {item.label[language]}
               </a>

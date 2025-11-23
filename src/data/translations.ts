@@ -52,7 +52,13 @@ const translations: Record<string, Record<Language, string>> = {
     ar: 'حجز موعد',
     tr: 'Randevu Al',
   },
-  
+  'hero.services': {
+    de: 'Unsere Leistungen',
+    en: 'Our Services',
+    ar: 'خدماتنا',
+    tr: 'Hizmetlerimiz',
+  },
+
   // Services Section
   'services.title': {
     de: 'Unsere Leistungen',
@@ -82,7 +88,6 @@ const translations: Record<string, Record<Language, string>> = {
   },
   'booking.service': {
     de: 'Behandlung',
-    en: 'Service',
     en: 'Service',
     ar: 'الخدمة',
     tr: 'Hizmet',

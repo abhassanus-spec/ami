@@ -7,96 +7,81 @@ const AboutSection: React.FC = () => {
   const teamMembers = [
     {
       name: {
-        de: 'Dr. Sarah Müller',
-        en: 'Dr. Sarah Müller',
-        ar: 'د. سارة مولر',
-        tr: 'Dr. Sarah Müller',
+        de: 'Dr. Louay Aljeroudy',
+        en: 'Dr. Louay Aljeroudy',
+        ar: 'د. لؤي الجرودي',
+        tr: 'Dr. Louay Aljeroudy',
       },
       role: {
-        de: 'Leitende Ärztin',
+        de: 'Leitender Arzt',
         en: 'Lead Physician',
-        ar: 'طبيبة رئيسية',
+        ar: 'طبيب رئيسي',
         tr: 'Baş Hekim',
       },
-      image: 'https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg',
+      image: 'https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg',
     },
     {
       name: {
-        de: 'Maria Schmidt',
-        en: 'Maria Schmidt',
-        ar: 'ماريا شميت',
-        tr: 'Maria Schmidt',
+        de: 'Yamama Aljeroudy',
+        en: 'Yamama Aljeroudy',
+        ar: 'يمامة الجرودي',
+        tr: 'Yamama Aljeroudy',
       },
       role: {
-        de: 'Kosmetikerin',
-        en: 'Aesthetician',
-        ar: 'أخصائية تجميل',
-        tr: 'Estetisyen',
+        de: 'Laser Expertin',
+        en: 'Laser Expert',
+        ar: 'خبيرة الليزر',
+        tr: 'Lazer Uzmanı',
       },
       image: 'https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg',
-    },
-    {
-      name: {
-        de: 'Thomas Weber',
-        en: 'Thomas Weber',
-        ar: 'توماس ويبر',
-        tr: 'Thomas Weber',
-      },
-      role: {
-        de: 'Hautpflegespezialist',
-        en: 'Skincare Specialist',
-        ar: 'أخصائي العناية بالبشرة',
-        tr: 'Cilt Bakım Uzmanı',
-      },
-      image: 'https://images.pexels.com/photos/7580270/pexels-photo-7580270.jpeg',
     },
   ];
 
   return (
     <section
       id="about"
-      className="py-20 bg-white"
+      className="py-24 md:py-32 bg-gradient-to-b from-white via-beige-50/30 to-white"
       dir={language === 'ar' ? 'rtl' : 'ltr'}
     >
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6 tracking-tight">
             {t('about.title')}
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-xl text-gray-600 leading-relaxed">
             {t('about.subtitle')}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center mb-24">
           <div className="lg:col-span-2">
-            <div className="relative">
+            <div className="relative group">
               <img
                 src="https://images.pexels.com/photos/8961027/pexels-photo-8961027.jpeg"
                 alt="Clinic interior"
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="w-full h-auto rounded-3xl shadow-2xl transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-green-800/10 rounded-lg"></div>
+              <div className="absolute inset-0 bg-green-800/10 rounded-3xl"></div>
             </div>
           </div>
-          
+
           <div className="lg:col-span-3 space-y-6">
-            <h3 className="text-2xl font-semibold text-green-800">
+            <h3 className="text-3xl font-bold text-green-800">
               {language === 'de' ? 'Unsere Geschichte' : 
                language === 'en' ? 'Our Story' : 
                language === 'ar' ? 'قصتنا' : 
                'Hikayemiz'}
             </h3>
-            <p className="text-gray-600">
-              {language === 'de' ? 
-                'Aljeroudy Aesthetikpraxis wurde mit dem Ziel gegründet, erstklassige ästhetische Behandlungen in einer warmen, einladenden Umgebung anzubieten. Unser Team aus erfahrenen Fachleuten ist bestrebt, personalisierte Behandlungspläne zu entwickeln, die auf Ihre individuellen Bedürfnisse zugeschnitten sind.' : 
-               language === 'en' ? 
-                'Aljeroudy Aesthetics was founded with the goal of providing top-tier aesthetic treatments in a warm, inviting environment. Our team of experienced professionals is dedicated to developing personalized treatment plans tailored to your individual needs.' : 
-               language === 'ar' ? 
-                'تم تأسيس مركز الجرودي للتجميل بهدف تقديم علاجات تجميلية من الدرجة الأولى في بيئة دافئة ومرحبة. يكرس فريقنا من المحترفين ذوي الخبرة جهودهم لتطوير خطط علاجية مخصصة تناسب احتياجاتك الفردية.' : 
+            <p className="text-gray-600 text-lg leading-relaxed">
+              {language === 'de' ?
+                'Aljeroudy Aesthetikpraxis wurde mit dem Ziel gegründet, erstklassige ästhetische Behandlungen in einer warmen, einladenden Umgebung anzubieten. Unser Team aus erfahrenen Fachleuten ist bestrebt, personalisierte Behandlungspläne zu entwickeln, die auf Ihre individuellen Bedürfnisse zugeschnitten sind.' :
+               language === 'en' ?
+                'Aljeroudy Aesthetics was founded with the goal of providing top-tier aesthetic treatments in a warm, inviting environment. Our team of experienced professionals is dedicated to developing personalized treatment plans tailored to your individual needs.' :
+               language === 'ar' ?
+                'تم تأسيس مركز الجرودي للتجميل بهدف تقديم علاجات تجميلية من الدرجة الأولى في بيئة دافئة ومرحبة. يكرس فريقنا من المحترفين ذوي الخبرة جهودهم لتطوير خطط علاجية مخصصة تناسب احتياجاتك الفردية.' :
                 'Aljeroudy Estetik, sıcak ve davetkar bir ortamda üst düzey estetik tedaviler sunma hedefiyle kuruldu. Deneyimli profesyonellerden oluşan ekibimiz, bireysel ihtiyaçlarınıza göre kişiselleştirilmiş tedavi planları geliştirmeye özen göstermektedir.'}
             </p>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-lg leading-relaxed">
               {language === 'de' ? 
                 'Mit modernster Technologie und einem Engagement für kontinuierliche Weiterbildung stellen wir sicher, dass wir immer die neuesten und effektivsten Behandlungen anbieten können, um Ihnen zu helfen, sich in Ihrer Haut wohlzufühlen und selbstbewusst in die Welt zu gehen.' : 
                language === 'en' ? 
@@ -106,28 +91,28 @@ const AboutSection: React.FC = () => {
                 'Gelişmiş teknoloji ve sürekli eğitime olan bağlılığımızla, cildinizde kendinizi rahat hissetmenize ve dünyada güven duymanıza yardımcı olmak için her zaman en son ve en etkili tedavileri sunabildiğimizden emin oluyoruz.'}
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-              <div className="text-center p-4 bg-beige/10 rounded-lg">
-                <div className="text-3xl font-bold text-green-800">10+</div>
-                <div className="text-sm text-gray-600">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
+              <div className="text-center p-6 bg-gradient-to-br from-beige-50 to-beige-100/50 rounded-2xl shadow-lg transform transition-all duration-300 hover:scale-105">
+                <div className="text-4xl font-bold text-green-800 mb-2">10+</div>
+                <div className="text-sm font-medium text-gray-600">
                   {language === 'de' ? 'Jahre Erfahrung' : 
                    language === 'en' ? 'Years Experience' : 
                    language === 'ar' ? 'سنوات خبرة' : 
                    'Yıllık Deneyim'}
                 </div>
               </div>
-              <div className="text-center p-4 bg-beige/10 rounded-lg">
-                <div className="text-3xl font-bold text-green-800">5k+</div>
-                <div className="text-sm text-gray-600">
+              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100/50 rounded-2xl shadow-lg transform transition-all duration-300 hover:scale-105">
+                <div className="text-4xl font-bold text-green-800 mb-2">5k+</div>
+                <div className="text-sm font-medium text-gray-600">
                   {language === 'de' ? 'Zufriedene Kunden' : 
                    language === 'en' ? 'Happy Clients' : 
                    language === 'ar' ? 'زبائن سعداء' : 
                    'Mutlu Müşteriler'}
                 </div>
               </div>
-              <div className="text-center p-4 bg-beige/10 rounded-lg">
-                <div className="text-3xl font-bold text-green-800">20+</div>
-                <div className="text-sm text-gray-600">
+              <div className="text-center p-6 bg-gradient-to-br from-beige-50 to-beige-100/50 rounded-2xl shadow-lg transform transition-all duration-300 hover:scale-105">
+                <div className="text-4xl font-bold text-green-800 mb-2">20+</div>
+                <div className="text-sm font-medium text-gray-600">
                   {language === 'de' ? 'Behandlungsarten' : 
                    language === 'en' ? 'Treatment Types' : 
                    language === 'ar' ? 'أنواع العلاج' : 
@@ -139,29 +124,29 @@ const AboutSection: React.FC = () => {
         </div>
 
         {/* Team Section */}
-        <div className="mt-20">
-          <h3 className="text-2xl font-semibold text-green-800 text-center mb-10">
+        <div className="mt-24">
+          <h3 className="text-3xl md:text-4xl font-bold text-green-800 text-center mb-16">
             {language === 'de' ? 'Unser Team' : 
              language === 'en' ? 'Our Team' : 
              language === 'ar' ? 'فريقنا' : 
              'Ekibimiz'}
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-3xl mx-auto">
             {teamMembers.map((member, index) => (
               <div key={index} className="text-center group">
-                <div className="relative mb-4 overflow-hidden rounded-full w-48 h-48 mx-auto">
+                <div className="relative mb-6 overflow-hidden rounded-full w-56 h-56 mx-auto shadow-lg">
                   <img
                     src={member.image}
                     alt={member.name[language]}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-green-800/0 group-hover:bg-green-800/10 transition-colors duration-300 rounded-full"></div>
+                  <div className="absolute inset-0 bg-green-800/0 group-hover:bg-green-800/10 transition-all duration-500 rounded-full"></div>
                 </div>
-                <h4 className="text-xl font-semibold text-green-800">
+                <h4 className="text-2xl font-semibold text-green-800 mb-2">
                   {member.name[language]}
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-lg">
                   {member.role[language]}
                 </p>
               </div>

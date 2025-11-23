@@ -7,7 +7,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import ServicesSection from './components/ServicesSection';
 import AboutSection from './components/AboutSection';
-import BookingForm from './components/BookingForm';
+import BookingSection from './components/BookingSection';
 import ContactSection from './components/ContactSection';
 import NewsletterSignup from './components/NewsletterSignup';
 import Footer from './components/Footer';
@@ -27,7 +27,7 @@ function App() {
             <Hero />
             <ServicesSection />
             <AboutSection />
-            <BookingForm />
+            <BookingSection />
             <NewsletterSignup />
             <ContactSection />
             <Footer />
