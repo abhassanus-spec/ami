@@ -12,6 +12,10 @@ import ContactSection from './components/ContactSection';
 import NewsletterSignup from './components/NewsletterSignup';
 import Footer from './components/Footer';
 import AiChatbox from './components/AiChatbox';
+import WhatsAppButton from './components/WhatsAppButton';
+import CallButton from './components/CallButton';
+import CookieConsentBanner from './components/CookieConsentBanner';
+import CookieSettingsButton from './components/CookieSettingsButton';
 
 function App() {
   return (
@@ -32,6 +36,10 @@ function App() {
             <ContactSection />
             <Footer />
             <AiChatbox />
+            <WhatsAppButton />
+            <CallButton />
+            <CookieConsentBanner />
+            <CookieSettingsButton />
             <Toaster position="top-center" />
           </div>
         </AuthProvider>

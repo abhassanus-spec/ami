@@ -130,29 +130,46 @@ const Footer: React.FC = () => {
           {/* Legal */}
           <div className="md:col-span-1">
             <h3 className="text-xl font-semibold mb-4 text-beige">
-              {language === 'de' ? 'Rechtliches' : 
-               language === 'en' ? 'Legal' : 
-               language === 'ar' ? 'قانوني' : 
+              {language === 'de' ? 'Rechtliches' :
+               language === 'en' ? 'Legal' :
+               language === 'ar' ? 'قانوني' :
                'Yasal'}
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-beige transition-colors">
-                  {t('footer.privacy')}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-beige transition-colors">
-                  {t('footer.terms')}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-beige transition-colors">
-                  {language === 'de' ? 'Impressum' : 
-                   language === 'en' ? 'Imprint' : 
-                   language === 'ar' ? 'بصمة' : 
+                <a href="/impressum" className="hover:text-beige transition-colors">
+                  {language === 'de' ? 'Impressum' :
+                   language === 'en' ? 'Imprint' :
+                   language === 'ar' ? 'بصمة' :
                    'Künye'}
                 </a>
+              </li>
+              <li>
+                <a href="/datenschutz" className="hover:text-beige transition-colors">
+                  {language === 'de' ? 'Datenschutz' :
+                   language === 'en' ? 'Privacy' :
+                   language === 'ar' ? 'الخصوصية' :
+                   'Gizlilik'}
+                </a>
+              </li>
+              <li>
+                <a href="/cookie-richtlinie" className="hover:text-beige transition-colors">
+                  {language === 'de' ? 'Cookie-Richtlinie' :
+                   language === 'en' ? 'Cookie Policy' :
+                   language === 'ar' ? 'سياسة ملفات تعريف الارتباط' :
+                   'Çerez Politikası'}
+                </a>
+              </li>
+              <li>
+                <button
+                  onClick={() => window.dispatchEvent(new Event('openCookieSettings'))}
+                  className="hover:text-beige transition-colors text-left"
+                >
+                  {language === 'de' ? 'Cookie-Einstellungen' :
+                   language === 'en' ? 'Cookie Settings' :
+                   language === 'ar' ? 'إعدادات ملفات تعريف الارتباط' :
+                   'Çerez Ayarları'}
+                </button>
               </li>
             </ul>
           </div>
