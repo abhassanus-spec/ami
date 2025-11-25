@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface LogoProps {
   isScrolled?: boolean;
@@ -6,7 +7,7 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ isScrolled = false }) => {
   return (
-    <div className="flex items-center transition-all duration-300">
+    <Link to="/" className="flex items-center transition-all duration-300">
       <img
         src="/sdasd.png"
         alt="Aljeroudy Aesthetikpraxis Logo"
@@ -14,7 +15,7 @@ const Logo: React.FC<LogoProps> = ({ isScrolled = false }) => {
           isScrolled ? 'brightness-100' : 'brightness-0 invert'
         }`}
       />
-    </div>
+    </Link>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLocation, Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
 import { NavItem } from '../types';
@@ -7,8 +8,11 @@ import Logo from './Logo';
 
 const Header: React.FC = () => {
   const { t, language } = useLanguage();
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const isLegalPage = location.pathname !== '/';
 
   const navItems: NavItem[] = [
     {
@@ -78,7 +82,7 @@ const Header: React.FC = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
+        isLegalPage || isScrolled
           ? 'bg-white/95 backdrop-blur-md shadow-lg py-3'
           : 'bg-transparent py-5'
       }`}
@@ -86,21 +90,34 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <Logo isScrolled={isScrolled} />
+          <Logo isScrolled={isLegalPage || isScrolled} />
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {!isLegalPage && navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 className={`text-sm font-medium transition-colors duration-300 ${
-                  isScrolled ? 'text-green-800 hover:text-green-600' : 'text-white hover:text-beige'
+                  isLegalPage || isScrolled ? 'text-green-800 hover:text-green-600' : 'text-white hover:text-beige'
                 }`}
               >
                 {item.label[language]}
               </a>
             ))}
+            {isLegalPage && (
+              <Link
+                to="/"
+                className={`text-sm font-medium transition-colors duration-300 ${
+                  isLegalPage || isScrolled ? 'text-green-800 hover:text-green-600' : 'text-white hover:text-beige'
+                }`}
+              >
+                {language === 'de' ? '← Zurück zur Startseite' :
+                 language === 'en' ? '← Back to Home' :
+                 language === 'ar' ? '→ العودة للرئيسية' :
+                 '← Ana Sayfaya Dön'}
+              </Link>
+            )}
             <LanguageSwitcher />
           </nav>
 
@@ -109,7 +126,7 @@ const Header: React.FC = () => {
             <LanguageSwitcher />
             <button
               onClick={toggleMobileMenu}
-              className={`ml-2 p-2 rounded-md ${isScrolled ? 'text-green-800' : 'text-white'}`}
+              className={`ml-2 p-2 rounded-md ${isLegalPage || isScrolled ? 'text-green-800' : 'text-white'}`}
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -125,7 +142,7 @@ const Header: React.FC = () => {
         }`}
       >
         <nav className="container mx-auto px-4 flex flex-col space-y-4">
-          {navItems.map((item) => (
+          {!isLegalPage && navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
@@ -135,6 +152,18 @@ const Header: React.FC = () => {
               {item.label[language]}
             </a>
           ))}
+          {isLegalPage && (
+            <Link
+              to="/"
+              className="text-green-800 hover:text-beige font-medium py-2 transition-colors duration-300"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {language === 'de' ? '← Zurück zur Startseite' :
+               language === 'en' ? '← Back to Home' :
+               language === 'ar' ? '→ العودة للرئيسية' :
+               '← Ana Sayfaya Dön'}
+            </Link>
+          )}
         </nav>
       </div>
     </header>
