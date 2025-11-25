@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Impressum: React.FC = () => {
   return (
-    <div className="legal-page">
+    <>
+      <Helmet>
+        <title>Impressum | Aljeroudy Ästhetikpraxis Essen</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+      <div className="legal-page">
       <div className="legal-container">
         <h1>Impressum</h1>
 
@@ -144,6 +150,7 @@ const Impressum: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

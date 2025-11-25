@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Bildnachweise: React.FC = () => {
   return (
-    <div className="legal-page">
+    <>
+      <Helmet>
+        <title>Bildnachweise & Credits | Aljeroudy Ästhetikpraxis Essen</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+      <div className="legal-page">
       <div className="legal-container">
         <h1>Bildnachweise & Credits</h1>
 
@@ -424,6 +430,7 @@ const Bildnachweise: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

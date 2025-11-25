@@ -1,9 +1,17 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { MessageCircle } from 'lucide-react';
 
 const WhatsAppButton: React.FC = () => {
+  const location = useLocation();
   const phoneNumber = '4917641454381';
   const message = encodeURIComponent('Hallo, ich möchte gerne einen Termin vereinbaren.');
+
+  const isLegalPage = location.pathname !== '/';
+
+  if (isLegalPage) {
+    return null;
+  }
 
   return (
     <a

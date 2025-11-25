@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { MessageSquare, Send, X } from 'lucide-react';
 
 const AiChatbox: React.FC = () => {
+  const location = useLocation();
   const { language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
@@ -62,6 +64,12 @@ const AiChatbox: React.FC = () => {
       setIsLoading(false);
     }
   };
+
+  const isLegalPage = location.pathname !== '/';
+
+  if (isLegalPage) {
+    return null;
+  }
 
   return (
     <>

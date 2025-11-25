@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const CookieRichtlinie: React.FC = () => {
   const handleOpenSettings = () => {
@@ -8,7 +9,12 @@ const CookieRichtlinie: React.FC = () => {
   };
 
   return (
-    <div className="legal-page">
+    <>
+      <Helmet>
+        <title>Cookie-Richtlinie | Aljeroudy Ästhetikpraxis Essen</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+      <div className="legal-page">
       <div className="legal-container">
         <h1>Cookie-Richtlinie</h1>
 
@@ -166,6 +172,7 @@ const CookieRichtlinie: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -4,6 +4,7 @@ import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { LanguageProvider } from './context/LanguageContext';
 import { AuthProvider } from './context/AuthContext';
 import { Toaster } from 'react-hot-toast';
+import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
 import HeroElegant from './components/HeroElegant';
 import ServicesSection from './components/ServicesSection';
@@ -45,6 +46,7 @@ function App() {
             <meta name="description" content="Professional aesthetic treatments in Essen. Book your appointment for Botox, fillers, laser treatments and more." />
           </Helmet>
           <div className="min-h-screen bg-white font-sans">
+            <ScrollToTop />
             <Header />
             <Routes>
               <Route path="/" element={<HomePage />} />
