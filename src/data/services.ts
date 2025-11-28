@@ -16,7 +16,7 @@ const services: Service[] = [
       tr: 'Üç yüz bölgesi için profesyonel Botoks tedavisi',
     },
     duration: '30 min',
-    price: '110€',
+    price: 'ab 110€',
     image: '/Gemini_Generated_Image_w05yhvw05yhvw05y.png',
   },
   {
@@ -34,7 +34,7 @@ const services: Service[] = [
       tr: 'Hacim artırma ve dudak şekillendirme',
     },
     duration: '45 min',
-    price: '150€',
+    price: 'ab 150€',
     image: '/Gemini_Generated_Image_q9q51qq9q51qq9q5.png',
   },
   {
@@ -52,7 +52,7 @@ const services: Service[] = [
       tr: 'Hyaluronik asit ile hassas yüz şekillendirme',
     },
     duration: '45 min',
-    price: '100€',
+    price: 'ab 100€',
     image: '/sdasd.png',
   },
   {
@@ -70,7 +70,7 @@ const services: Service[] = [
       tr: 'Modern lazer teknolojisi ile cilt güzelleştirme',
     },
     duration: '60 min',
-    price: '150€',
+    price: 'ab 150€',
     image: 'https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
@@ -88,7 +88,7 @@ const services: Service[] = [
       tr: 'Saç büyümesi ve kalınlaşması için yenilikçi tedavi',
     },
     duration: '45 min',
-    price: '75€',
+    price: 'ab 75€',
     image: '/Gemini_Generated_Image_gu3gfygu3gfygu3g.png',
   },
   {
@@ -106,7 +106,7 @@ const services: Service[] = [
       tr: 'Cilt yenilenmesi için gelişmiş tedavi',
     },
     duration: '60 min',
-    price: '150€',
+    price: 'ab 150€',
     image: '/Gemini_Generated_Image_ub1amaub1amaub1a.png',
   },
   {
@@ -124,7 +124,7 @@ const services: Service[] = [
       tr: 'Maksimum cilt iyileştirmesi için kombine tedavi',
     },
     duration: '75 min',
-    price: '200€',
+    price: 'ab 200€',
     image: 'https://images.pexels.com/photos/3997992/pexels-photo-3997992.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
@@ -142,7 +142,7 @@ const services: Service[] = [
       tr: 'Tüm vücut için kalıcı tüy alma',
     },
     duration: '120 min',
-    price: '80€',
+    price: 'ab 80€',
     image: 'https://images.pexels.com/photos/3738348/pexels-photo-3738348.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
@@ -160,7 +160,7 @@ const services: Service[] = [
       tr: 'Takip tedavisi ve bakım',
     },
     duration: '45 min',
-    price: '120€',
+    price: 'ab 120€',
     image: 'https://images.pexels.com/photos/3997990/pexels-photo-3997990.jpeg',
   },
   {
@@ -178,7 +178,7 @@ const services: Service[] = [
       tr: 'Çift çene azaltma için hedefli tedavi',
     },
     duration: '30 min',
-    price: '75€',
+    price: 'ab 75€',
     image: 'https://images.pexels.com/photos/3985329/pexels-photo-3985329.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
 ];

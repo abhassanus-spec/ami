@@ -13,20 +13,6 @@ const NewsletterSignup: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      // Generate voucher code
-      const voucherCode = `WELCOME${Math.random().toString(36).substring(2, 8).toUpperCase()}`;
-      
-      // Create voucher
-      const { error: voucherError } = await supabase
-        .from('vouchers')
-        .insert({
-          code: voucherCode,
-          discount_amount: 10,
-          expires_at: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days
-        });
-
-      if (voucherError) throw voucherError;
-
       // Subscribe to newsletter
       const { error: newsletterError } = await supabase
         .from('newsletter_subscribers')
@@ -37,13 +23,6 @@ const NewsletterSignup: React.FC = () => {
         });
 
       if (newsletterError) throw newsletterError;
-
-      // Send welcome email with voucher code
-      const { error: emailError } = await supabase.functions.invoke('send-welcome-email', {
-        body: { email, voucherCode, language },
-      });
-
-      if (emailError) throw emailError;
 
       toast.success(t('newsletter.success'));
       setEmail('');
