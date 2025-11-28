@@ -17,7 +17,7 @@ const services: Service[] = [
     },
     duration: '30 min',
     price: '110€',
-    image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800',
+    image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800',
   },
   {
     id: 'lippenfiller',
@@ -35,7 +35,7 @@ const services: Service[] = [
     },
     duration: '45 min',
     price: '150€',
-    image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800',
+    image: 'https://images.unsplash.com/photo-1629385109584-e54f17c33ac3?w=800',
   },
   {
     id: 'gesichtsfiller',
@@ -53,7 +53,7 @@ const services: Service[] = [
     },
     duration: '45 min',
     price: '100€',
-    image: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800',
+    image: 'https://images.unsplash.com/photo-1622106074248-4428c199a7ea?w=800',
   },
   {
     id: 'co2-laser',
@@ -71,7 +71,7 @@ const services: Service[] = [
     },
     duration: '60 min',
     price: '150€',
-    image: 'https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=800',
+    image: 'https://images.unsplash.com/photo-1620831831386-67cfcba88025?w=800',
   },
   {
     id: 'prp-haare',
@@ -89,7 +89,7 @@ const services: Service[] = [
     },
     duration: '45 min',
     price: '75€',
-    image: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?w=800',
+    image: 'https://images.unsplash.com/photo-1620900396653-16a42fd8e749?w=800',
   },
   {
     id: 'exosomen',
@@ -107,7 +107,7 @@ const services: Service[] = [
     },
     duration: '60 min',
     price: '150€',
-    image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800',
+    image: 'https://images.unsplash.com/photo-1626447857058-2cf724ca6e85?w=800',
   },
   {
     id: 'rf-microneedling',
@@ -125,7 +125,7 @@ const services: Service[] = [
     },
     duration: '75 min',
     price: '200€',
-    image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800',
+    image: 'https://images.unsplash.com/photo-1606495481424-7419aedfc49e?w=800',
   },
   {
     id: 'laser-hair',
@@ -143,7 +143,7 @@ const services: Service[] = [
     },
     duration: '120 min',
     price: '80€',
-    image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800',
+    image: 'https://images.unsplash.com/photo-1659613629131-ffd74f15e39b?w=800',
   },
   {
     id: 'folgetermine',
@@ -179,7 +179,7 @@ const services: Service[] = [
     },
     duration: '30 min',
     price: '75€',
-    image: 'https://images.unsplash.com/photo-1504439904031-93ded9f93e4e?w=800',
+    image: 'https://images.unsplash.com/photo-1605726187219-47cc3354b925?w=800',
   },
 ];
 

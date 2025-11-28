@@ -40,125 +40,111 @@ const Bildnachweise: React.FC = () => {
 
           <div className="credits-grid">
             <div className="credit-item">
-              <strong>Hero Section - Klinikbild:</strong>
-              <br />
-              Foto von{' '}
-              <a href="https://unsplash.com/@nci" target="_blank" rel="noopener noreferrer">
-                National Cancer Institute
-              </a>{' '}
-              auf Unsplash
-            </div>
-
-            <div className="credit-item">
               <strong>Botox Behandlung:</strong>
               <br />
-              Foto von{' '}
               <a
-                href="https://unsplash.com/@testalize"
+                href="https://unsplash.com/de/fotos/eine-person-die-eine-botilagebehandlung-von-einem-arzt-erhalt-eSEzyNQm0Cg"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Testalize.me
-              </a>{' '}
-              auf Unsplash
+                Unsplash Photo (eSEzyNQm0Cg)
+              </a>
             </div>
 
             <div className="credit-item">
-              <strong>Lip Filler:</strong>
+              <strong>Lippenfiller:</strong>
               <br />
-              Foto von{' '}
               <a
-                href="https://unsplash.com/@jackie_tsang"
+                href="https://unsplash.com/de/fotos/portrat-einer-schonen-frau-die-auf-die-lippen-gespritzt-wird-schonheitsinjektionen-und-kosmetik-v7nfjUPgTdc"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Jackie Tsang
-              </a>{' '}
-              auf Unsplash
+                Unsplash Photo (v7nfjUPgTdc)
+              </a>
             </div>
 
             <div className="credit-item">
-              <strong>Facial Filler:</strong>
+              <strong>Gesichtsfiller:</strong>
               <br />
-              Foto von{' '}
               <a
-                href="https://unsplash.com/@crystalsjo"
+                href="https://unsplash.com/de/fotos/anti-aging-behandlungskonzept-nahaufnahme-auf-dem-portrat-eines-jungen-attraktiven-mannes-mit-schonheitsinjektionen-die-falten-der-krahenfusse-verhindern-haut-BAjWwD5OeJA"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Crystal Jo
-              </a>{' '}
-              auf Unsplash
+                Unsplash Photo (BAjWwD5OeJA)
+              </a>
             </div>
 
             <div className="credit-item">
-              <strong>CO2 Laser:</strong>
+              <strong>CO2 Laser Gesicht:</strong>
               <br />
-              Foto von{' '}
               <a
-                href="https://unsplash.com/@itfeelslikefilm"
+                href="https://unsplash.com/de/fotos/schonheitsbehandlung-portrat-einer-schonen-jungen-frau-mit-weicher-haut-und-roten-laserpunkten-im-gesicht-nahaufnahme-einer-sexy-gesunden-frau-vor-der-plastischen-chirurgie-auf-grauem-hintergrund-kosmetologie-hohe-auflosung-pHEQZ-ynylY"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Jannis Brandt
-              </a>{' '}
-              auf Unsplash
+                Unsplash Photo (pHEQZ-ynylY)
+              </a>
             </div>
 
             <div className="credit-item">
               <strong>PRP Haarbehandlung:</strong>
               <br />
-              Foto von{' '}
               <a
-                href="https://unsplash.com/@element5digital"
+                href="https://unsplash.com/de/fotos/frau-bekommt-injektion-in-die-kopfhaut-mesotherapie-haarausfalltherapie-arzte-tragen-handschuhe-im-salon-und-nehmen-medizinische-manipulationen-an-patienten-vor-nahaufnahme-TB9BmtxplP4"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Element5 Digital
-              </a>{' '}
-              auf Unsplash
+                Unsplash Photo (TB9BmtxplP4)
+              </a>
             </div>
 
             <div className="credit-item">
               <strong>Exosomen Behandlung:</strong>
               <br />
-              Foto von{' '}
               <a
-                href="https://unsplash.com/@adrienolichon"
+                href="https://unsplash.com/de/fotos/mikronadel-mesotherapie-schone-blonde-frau-die-eine-microneedling-verjungungsbehandlung-in-der-schonheitsklinik-erhalt-C6-SvMk_V-E"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Adrien Olichon
-              </a>{' '}
-              auf Unsplash
+                Unsplash Photo (C6-SvMk_V-E)
+              </a>
             </div>
 
             <div className="credit-item">
               <strong>RF-Microneedling:</strong>
               <br />
-              Foto von{' '}
               <a
-                href="https://unsplash.com/@testalize"
+                href="https://unsplash.com/de/fotos/schone-frau-wahrend-der-radiofrequenz-lifting-behandlung-am-hals-in-einer-medizinisch-asthetischen-klinik-kuoArOGpFLo"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Testalize.me
-              </a>{' '}
-              auf Unsplash
+                Unsplash Photo (kuoArOGpFLo)
+              </a>
             </div>
 
             <div className="credit-item">
               <strong>Laser Haarentfernung:</strong>
               <br />
-              Foto von{' '}
               <a
-                href="https://unsplash.com/@brookecagle"
+                href="https://unsplash.com/de/fotos/eine-frau-die-auf-einem-bett-liegt-und-einen-fon-in-der-hand-halt-szpFxaqS658"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Brooke Cagle
-              </a>{' '}
-              auf Unsplash
+                Unsplash Photo (szpFxaqS658)
+              </a>
+            </div>
+
+            <div className="credit-item">
+              <strong>Fettwegspritze (Doppelkinn):</strong>
+              <br />
+              <a
+                href="https://unsplash.com/de/fotos/eine-frau-mit-der-hand-im-nacken-G1VtvRhuG7g"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Unsplash Photo (G1VtvRhuG7g)
+              </a>
             </div>
           </div>
 
