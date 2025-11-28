@@ -4,39 +4,6 @@ import { useLanguage } from '../context/LanguageContext';
 const AboutSection: React.FC = () => {
   const { t, language } = useLanguage();
 
-  const teamMembers = [
-    {
-      name: {
-        de: 'Dr. Louay Aljeroudy',
-        en: 'Dr. Louay Aljeroudy',
-        ar: 'د. لؤي الجرودي',
-        tr: 'Dr. Louay Aljeroudy',
-      },
-      role: {
-        de: 'Leitender Arzt',
-        en: 'Lead Physician',
-        ar: 'طبيب رئيسي',
-        tr: 'Baş Hekim',
-      },
-      image: 'https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg',
-    },
-    {
-      name: {
-        de: 'Yamama Aljeroudy',
-        en: 'Yamama Aljeroudy',
-        ar: 'يمامة الجرودي',
-        tr: 'Yamama Aljeroudy',
-      },
-      role: {
-        de: 'Laser Expertin',
-        en: 'Laser Expert',
-        ar: 'خبيرة الليزر',
-        tr: 'Lazer Uzmanı',
-      },
-      image: 'https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg',
-    },
-  ];
-
   return (
     <section
       id="about"
@@ -55,13 +22,12 @@ const AboutSection: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center mb-24">
           <div className="lg:col-span-2">
-            <div className="relative group">
+            <div className="relative group flex items-center justify-center p-8">
               <img
-                src="https://images.pexels.com/photos/8961027/pexels-photo-8961027.jpeg"
-                alt="Clinic interior"
-                className="w-full h-auto rounded-3xl shadow-2xl transition-transform duration-700 group-hover:scale-105"
+                src="/sdasd copy.png"
+                alt="Aljeroudy Aesthetikpraxis Logo"
+                className="w-full max-w-md h-auto transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-green-800/10 rounded-3xl"></div>
             </div>
           </div>
 
@@ -120,37 +86,6 @@ const AboutSection: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Team Section */}
-        <div className="mt-24">
-          <h3 className="text-3xl md:text-4xl font-bold text-green-800 text-center mb-16">
-            {language === 'de' ? 'Unser Team' : 
-             language === 'en' ? 'Our Team' : 
-             language === 'ar' ? 'فريقنا' : 
-             'Ekibimiz'}
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-3xl mx-auto">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="text-center group">
-                <div className="relative mb-6 overflow-hidden rounded-full w-56 h-56 mx-auto shadow-lg">
-                  <img
-                    src={member.image}
-                    alt={member.name[language]}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-green-800/0 group-hover:bg-green-800/10 transition-all duration-500 rounded-full"></div>
-                </div>
-                <h4 className="text-2xl font-semibold text-green-800 mb-2">
-                  {member.name[language]}
-                </h4>
-                <p className="text-gray-600 text-lg">
-                  {member.role[language]}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </div>
