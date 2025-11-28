@@ -35,7 +35,7 @@ const services: Service[] = [
     },
     duration: '45 min',
     price: '150€',
-    image: 'https://images.unsplash.com/photo-1731938921542-4bb9bbd45cd0?q=80&w=800&auto=format&fit=crop',
+    image: '/Gemini_Generated_Image_q9q51qq9q51qq9q5.png',
   },
   {
     id: 'gesichtsfiller',
