@@ -53,7 +53,7 @@ const services: Service[] = [
     },
     duration: '45 min',
     price: '100€',
-    image: 'https://images.pexels.com/photos/3985327/pexels-photo-3985327.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/sdasd.png',
   },
   {
     id: 'co2-laser',
