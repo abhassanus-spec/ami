@@ -88,6 +88,48 @@ const AboutSection: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Team Info Section */}
+        <div className="mt-24 max-w-4xl mx-auto">
+          <h3 className="text-3xl md:text-4xl font-bold text-green-800 text-center mb-12">
+            {language === 'de' ? 'Unser Team' :
+             language === 'en' ? 'Our Team' :
+             language === 'ar' ? 'فريقنا' :
+             'Ekibimiz'}
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-beige-100 hover:shadow-xl transition-all duration-300">
+              <h4 className="text-2xl font-bold text-green-800 mb-3">
+                Dr. Louay Aljeroudy
+              </h4>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                {language === 'de' ?
+                  'Verantwortlich für Botox, Filler und alle ästhetischen Behandlungen in unserer Praxis.' :
+                 language === 'en' ?
+                  'Responsible for Botox, Fillers and all aesthetic treatments in our practice.' :
+                 language === 'ar' ?
+                  'المسؤول عن البوتوكس والفيلر وجميع العلاجات التجميلية في عيادتنا.' :
+                  'Kliniğimizdeki Botoks, Dolgu ve tüm estetik tedavilerden sorumludur.'}
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-beige-100 hover:shadow-xl transition-all duration-300">
+              <h4 className="text-2xl font-bold text-green-800 mb-3">
+                Yamama Aljeroudy
+              </h4>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                {language === 'de' ?
+                  'Expertin für Laser-Haarentfernung und alle Laser-Behandlungen.' :
+                 language === 'en' ?
+                  'Expert in Laser Hair Removal and all laser treatments.' :
+                 language === 'ar' ?
+                  'خبيرة في إزالة الشعر بالليزر وجميع علاجات الليزر.' :
+                  'Lazer Epilasyon ve tüm lazer tedavilerinde uzman.'}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
