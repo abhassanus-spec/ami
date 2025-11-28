@@ -107,7 +107,7 @@ const services: Service[] = [
     },
     duration: '60 min',
     price: '150€',
-    image: 'https://images.pexels.com/photos/3985331/pexels-photo-3985331.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/Gemini_Generated_Image_ub1amaub1amaub1a.png',
   },
   {
     id: 'rf-microneedling',
