@@ -17,7 +17,7 @@ const services: Service[] = [
     },
     duration: '30 min',
     price: '110€',
-    image: 'https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/Gemini_Generated_Image_w05yhvw05yhvw05y.png',
   },
   {
     id: 'lippenfiller',

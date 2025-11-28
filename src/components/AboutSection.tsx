@@ -99,29 +99,19 @@ const AboutSection: React.FC = () => {
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl shadow-lg border-2 border-beige-100 hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src="/Gemini_Generated_Image_w05yhvw05yhvw05y.png"
-                  alt="Dr. Louay Aljeroudy - Botox & Filler Specialist"
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 to-transparent"></div>
-              </div>
-              <div className="p-8">
-                <h4 className="text-2xl font-bold text-green-800 mb-3">
-                  Dr. Louay Aljeroudy
-                </h4>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  {language === 'de' ?
-                    'Verantwortlich für Botox, Filler und alle ästhetischen Behandlungen in unserer Praxis.' :
-                   language === 'en' ?
-                    'Responsible for Botox, Fillers and all aesthetic treatments in our practice.' :
-                   language === 'ar' ?
-                    'المسؤول عن البوتوكس والفيلر وجميع العلاجات التجميلية في عيادتنا.' :
-                    'Kliniğimizdeki Botoks, Dolgu ve tüm estetik tedavilerden sorumludur.'}
-                </p>
-              </div>
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-beige-100 hover:shadow-xl transition-all duration-300">
+              <h4 className="text-2xl font-bold text-green-800 mb-3">
+                Dr. Louay Aljeroudy
+              </h4>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                {language === 'de' ?
+                  'Verantwortlich für Botox, Filler und alle ästhetischen Behandlungen in unserer Praxis.' :
+                 language === 'en' ?
+                  'Responsible for Botox, Fillers and all aesthetic treatments in our practice.' :
+                 language === 'ar' ?
+                  'المسؤول عن البوتوكس والفيلر وجميع العلاجات التجميلية في عيادتنا.' :
+                  'Kliniğimizdeki Botoks, Dolgu ve tüm estetik tedavilerden sorumludur.'}
+              </p>
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-beige-100 hover:shadow-xl transition-all duration-300">
