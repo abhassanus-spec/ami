@@ -89,7 +89,7 @@ const services: Service[] = [
     },
     duration: '45 min',
     price: '75€',
-    image: 'https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/Gemini_Generated_Image_gu3gfygu3gfygu3g.png',
   },
   {
     id: 'exosomen',
