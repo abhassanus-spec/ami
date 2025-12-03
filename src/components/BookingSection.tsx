@@ -56,7 +56,7 @@ const BookingSection: React.FC = () => {
     },
   };
 
-  const phoneNumber = '+4917641454381';
+  const phoneNumber = '+4917641454381'; // +49 176 414 54 381
   const whatsappNumber = '4917641454381';
   const whatsappMessage = encodeURIComponent(
     language === 'de'

@@ -403,7 +403,7 @@ const Bildnachweise: React.FC = () => {
             <strong>E-Mail:</strong>{' '}
             <a href="mailto:info@praxis-aljeroudy.de">info@praxis-aljeroudy.de</a>
             <br />
-            <strong>Telefon:</strong> <a href="tel:+4917641454381">+49 176 41454381</a>
+            <strong>Telefon:</strong> <a href="tel:+4917641454381">+49 176 414 54 381</a>
           </p>
         </section>
 

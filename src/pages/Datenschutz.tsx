@@ -49,7 +49,7 @@ const Datenschutz: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone size={20} className="text-green-800" />
-                  <p>+49 176 41454381</p>
+                  <p>+49 176 414 54 381</p>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail size={20} className="text-green-800" />
@@ -337,7 +337,7 @@ const Datenschutz: React.FC = () => {
               <p className="font-semibold text-gray-900 mb-3">Ästhetik Praxis Aljeroudy</p>
               <div className="space-y-2 text-gray-700">
                 <p>[PLATZHALTER: Vollständige Adresse]</p>
-                <p>Tel: +49 176 41454381</p>
+                <p>Tel: +49 176 414 54 381</p>
                 <p>E-Mail: [PLATZHALTER: kontakt@praxis-aljeroudy.de]</p>
               </div>
             </div>

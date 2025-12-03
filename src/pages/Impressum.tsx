@@ -27,7 +27,7 @@ const Impressum: React.FC = () => {
         <section className="legal-section">
           <h2>Kontakt</h2>
           <p>
-            <strong>Telefon:</strong> <a href="tel:+4917641454381">+49 176 41454381</a><br />
+            <strong>Telefon:</strong> <a href="tel:+4917641454381">+49 176 414 54 381</a><br />
             <strong>E-Mail:</strong> <a href="mailto:info@praxis-aljeroudy.de">info@praxis-aljeroudy.de</a>
           </p>
         </section>

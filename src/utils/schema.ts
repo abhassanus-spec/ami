@@ -5,7 +5,7 @@ export const localBusinessSchema = {
   image: 'https://aljeroudy-aesthetik.de/logo.png',
   '@id': 'https://aljeroudy-aesthetik.de',
   url: 'https://aljeroudy-aesthetik.de',
-  telephone: '+49-176-41454381',
+  telephone: '+49-176-41454381', // +49 176 414 54 381
   priceRange: '€€',
   address: {
     '@type': 'PostalAddress',

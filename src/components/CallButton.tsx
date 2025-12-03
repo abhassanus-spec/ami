@@ -4,7 +4,7 @@ import { Phone } from 'lucide-react';
 
 const CallButton: React.FC = () => {
   const location = useLocation();
-  const phoneNumber = '+4917641454381';
+  const phoneNumber = '+4917641454381'; // +49 176 414 54 381
 
   const isLegalPage = location.pathname !== '/';
 

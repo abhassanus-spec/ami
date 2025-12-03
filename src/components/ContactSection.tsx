@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { MapPin, Phone, Mail, Clock, Instagram } from 'lucide-react';
+import toast from 'react-hot-toast';
 
 const ContactSection: React.FC = () => {
   const { t, language } = useLanguage();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
 
   return (
     <section
@@ -52,8 +60,8 @@ const ContactSection: React.FC = () => {
                     {t('contact.phone')}
                   </h4>
                   <p className="text-gray-600 mt-1">
-                    <a href="tel:+49123456789" className="hover:text-green-800 transition-colors">
-                      +49 123 456 789
+                    <a href="tel:+4917641454381" className="hover:text-green-800 transition-colors">
+                      +49 176 414 54 381
                     </a>
                   </p>
                 </div>
@@ -134,7 +142,45 @@ const ContactSection: React.FC = () => {
                'Bize Mesaj Gönderin'}
             </h3>
             
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={async (e) => {
+              e.preventDefault();
+              setIsSubmitting(true);
+
+              try {
+                const response = await fetch(
+                  `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-form`,
+                  {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                      'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+                    },
+                    body: JSON.stringify(formData),
+                  }
+                );
+
+                if (response.ok) {
+                  toast.success(
+                    language === 'de' ? 'Nachricht erfolgreich gesendet!' :
+                    language === 'en' ? 'Message sent successfully!' :
+                    language === 'ar' ? 'تم إرسال الرسالة بنجاح!' :
+                    'Mesaj başarıyla gönderildi!'
+                  );
+                  setFormData({ name: '', email: '', subject: '', message: '' });
+                } else {
+                  throw new Error('Failed to send message');
+                }
+              } catch (error) {
+                toast.error(
+                  language === 'de' ? 'Fehler beim Senden der Nachricht' :
+                  language === 'en' ? 'Error sending message' :
+                  language === 'ar' ? 'خطأ في إرسال الرسالة' :
+                  'Mesaj gönderilirken hata oluştu'
+                );
+              } finally {
+                setIsSubmitting(false);
+              }
+            }}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -144,6 +190,8 @@ const ContactSection: React.FC = () => {
                     type="text"
                     id="name"
                     name="name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                     required
                   />
@@ -156,28 +204,32 @@ const ContactSection: React.FC = () => {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                     required
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                  {language === 'de' ? 'Betreff' : 
-                   language === 'en' ? 'Subject' : 
-                   language === 'ar' ? 'الموضوع' : 
+                  {language === 'de' ? 'Betreff' :
+                   language === 'en' ? 'Subject' :
+                   language === 'ar' ? 'الموضوع' :
                    'Konu'}
                 </label>
                 <input
                   type="text"
                   id="subject"
                   name="subject"
+                  value={formData.subject}
+                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   required
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                   {t('contact.message')}
@@ -186,16 +238,25 @@ const ContactSection: React.FC = () => {
                   id="message"
                   name="message"
                   rows={5}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   required
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
-                className="px-6 py-3 bg-green-800 text-white rounded-md hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                disabled={isSubmitting}
+                className="px-6 py-3 bg-green-800 text-white rounded-md hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {t('contact.send')}
+                {isSubmitting ?
+                  (language === 'de' ? 'Wird gesendet...' :
+                   language === 'en' ? 'Sending...' :
+                   language === 'ar' ? 'جاري الإرسال...' :
+                   'Gönderiliyor...') :
+                  t('contact.send')
+                }
               </button>
             </form>
           </div>
