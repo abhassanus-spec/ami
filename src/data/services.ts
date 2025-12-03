@@ -125,7 +125,7 @@ const services: Service[] = [
     },
     duration: '75 min',
     price: 'ab 200€',
-    image: 'https://images.pexels.com/photos/3997992/pexels-photo-3997992.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/sdasd copy copy.png',
   },
   {
     id: 'laser-hair',
@@ -161,7 +161,7 @@ const services: Service[] = [
     },
     duration: '45 min',
     price: 'ab 120€',
-    image: 'https://images.pexels.com/photos/3997990/pexels-photo-3997990.jpeg',
+    image: '/sdasd copy copy.png',
   },
   {
     id: 'fettweg',
@@ -179,7 +179,7 @@ const services: Service[] = [
     },
     duration: '30 min',
     price: 'ab 75€',
-    image: 'https://images.pexels.com/photos/3985329/pexels-photo-3985329.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/sdasd copy copy.png',
   },
 ];
 
